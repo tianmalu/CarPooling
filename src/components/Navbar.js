@@ -5,7 +5,7 @@ const Navbar = () => {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const languageButtonRef = useRef(null);
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
-  const [isAtTop, setIsAtTop] = useState(true); // 初始化为 true
+  const [isAtTop, setIsAtTop] = useState(true); 
 
   useEffect(() => {
     const handleOutsideClick = (event) => {
@@ -15,15 +15,15 @@ const Navbar = () => {
     };
 
     const handleScroll = () => {
-      setIsAtTop(window.scrollY === 0); // 判断页面是否在顶部
+      setIsAtTop(window.scrollY === 0); 
     };
 
     document.addEventListener('click', handleOutsideClick);
-    window.addEventListener('scroll', handleScroll); // 监听滚动事件
+    window.addEventListener('scroll', handleScroll); 
 
     return () => {
       document.removeEventListener('click', handleOutsideClick);
-      window.removeEventListener('scroll', handleScroll); // 清除事件监听器
+      window.removeEventListener('scroll', handleScroll); 
     };
   }, [languageMenuOpen]);
 
@@ -41,7 +41,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`${darkMode ? 'bg-gray-900' : 'bg-gray-50'} fixed top-0 w-full flex justify-between items-center p-${isAtTop ? 2 : 4} text-${darkMode ? 'white' : 'black'}`}>
+    <nav className={`${darkMode ? 'bg-gray-900' : 'bg-gray-50'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-500`}>
       {/* Logo */}
       <div className="flex items-center">
         <img src="/logo.png" alt="Logo" className="h-8 mr-2" />
