@@ -139,7 +139,7 @@ const Register = () => {
                             Must match the first password input field.
                         </p>
 
-                        <button className="bg-white hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
+                        <button style = {{marginTop: '1rem'}} className="bg-white hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" disabled={!validName || !validPwd || !validMatch ? true : false}>Sign Up</button>
                     </form>
                     <p style={{ fontSize: '18px' }}>
                         Already registered?<br />
