@@ -1,15 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-const Navbar = () => {
-  const [darkMode, setDarkMode] = useState(false);
+const Navbar = ({darkMode, setDarkMode}) => {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const languageButtonRef = useRef(null);
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
   const [isAtTop, setIsAtTop] = useState(true); 
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
-      if (languageButtonRef.current && !languageButtonRef.current.contains(event.target)) {
+    const handleOutsideClick = (e) => {
+      if (languageButtonRef.current && !languageButtonRef.current.contains(e.target)) {
         setLanguageMenuOpen(false);
       }
     };
@@ -27,21 +26,15 @@ const Navbar = () => {
     };
   }, [languageMenuOpen]);
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
-
-  const toggleLanguageMenu = () => {
-    setLanguageMenuOpen(!languageMenuOpen);
-  };
-
   const selectLanguage = (language) => {
     setSelectedLanguage(language);
     setLanguageMenuOpen(false);
   };
 
+//TODO Adpat for different screen size
   return (
-    <nav className={`${darkMode ? 'bg-gray-900' : 'bg-gray-50'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-500`}>
+    // Normal Screen
+    <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-300`}>
       {/* Logo */}
       <div className="flex items-center">
         <img src="/logo.png" alt="Logo" className="h-8 mr-2" />
@@ -58,7 +51,12 @@ const Navbar = () => {
 
       {/* Login, Mode, Language */}
       <div className="flex space-x-4 relative">
-        <button ref={languageButtonRef} onClick={toggleLanguageMenu} className={`flex items-center ${darkMode ? 'hover:bg-gray-500' : 'hover:bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'} px-2 py-1 rounded-md`}>
+        <button ref={languageButtonRef} 
+                onClick={(e) => {
+                    setLanguageMenuOpen(!languageMenuOpen)
+                }}
+                className={`flex items-center ${darkMode ? 'hover:bg-gray-500' : 'hover:bg-yellow-300'} ${darkMode ? 'text-white' : 'text-black'} px-2 py-1 rounded-md`}
+        >
           <span className="mr-1 text-xs">▼{selectedLanguage}</span>
         </button>
         {languageMenuOpen && (
@@ -67,8 +65,12 @@ const Navbar = () => {
             <button onClick={() => selectLanguage('DE')} className={`block w-full text-left px-3 py-1 hover:bg-yellow-300 dark:hover:bg-gray-700 dark:text-white hover:text-black`}>DE</button>
           </div>
         )}
-        <button className='text-xs' onClick={toggleDarkMode}>Mode</button>
-        <button className={`bg-yellow-300 text-black font-bold w-full px-9 p-1 shadow-md dark:shadow-white dark:text-white dark:bg-gray-800`}>Login</button>
+        <button className='text-xs' 
+                onClick={(e) => {
+                    setDarkMode(!darkMode)
+                }}
+        >Mode</button>
+        <button className={`bg-yellow-300 text-black font-bold w-full px-9 p-1 shadow-md rounded-md hover:text-blue-600 focus:ring-4 focus:ring-blue-700`}>Login</button>
       </div>
     </nav>
   );
