@@ -8,14 +8,18 @@ import LangdingPage from './LangdingPage';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [selectedLanguage, setSelectedLanguage] = useState('EN');
+
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div style={{ flexGrow: '1' }} className="flex flex-col min-h-screen">
       <Navbar
         darkMode={darkMode}
         setDarkMode={setDarkMode}
+        selectedLanguage={selectedLanguage}
+        setSelectedLanguage={setSelectedLanguage}
       />
-      <main className="flex-grow">
+      <main className="flex-grow ">
         {/* <Register/> */}
         {/* <Login/> */}
         {/* <Startsite /> */}
@@ -23,9 +27,9 @@ function App() {
           darkMode={darkMode}
         />
       </main>
-      <Footer
+      {/* <Footer 
         darkMode={darkMode}
-      />
+      /> */}
     </div>
   );
 }

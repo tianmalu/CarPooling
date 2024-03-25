@@ -34,19 +34,19 @@ const Navbar = ({darkMode, setDarkMode}) => {
 //TODO Adpat for different screen size
   return (
     // Normal Screen
-    <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-300`}>
+    <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-100`}>
       {/* Logo */}
       <div className="flex items-center">
-        <img src="/logo.png" alt="Logo" className="h-8 mr-2" />
-        <span className={`text-4xl font-bold ${darkMode ? 'text-yellow-400' : 'text-gray-800'}`}>RideLink</span>
+        {/* <img src="/logo.png" alt="Logo" className="h-8 mr-2" /> */}
+        <a href='#home' className={`text-4xl font-bold ${darkMode ? 'text-yellow-400' : 'text-blue-800'}`}>RideLink</a>
       </div>
 
       {/* Links */}
       <div className={`flex rounded-lg border ${darkMode ? 'border-white' : 'border-black'} border-solid border-3 divide-x divide-gray-600`}>
-        <a href="#" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Home</a>
-        <a href="#" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>About</a>
-        <a href="#" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Service</a>
-        <a href="#" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Contact</a>
+        <a href="#home" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Home</a>
+        <a href="#about" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>About</a>
+        <a href="#service" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Service</a>
+        <a href="#contact" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Contact</a>
       </div>
 
       {/* Login, Mode, Language */}

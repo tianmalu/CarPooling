@@ -1,7 +1,8 @@
 import React from 'react';
 import CTA from './components/CTA';
 import Contact from './components/Contact';
-import BusinessFeatures from './components/Features';
+import Service from './components/Features';
+import About from './components/About';
 
 const LangdingPage = ({darkMode}) => {
   return (
@@ -9,8 +10,12 @@ const LangdingPage = ({darkMode}) => {
         <CTA 
             darkMode={darkMode}
         />
-        <section className="h-256 overflow-y-auto bg-white border border-black">About</section>
-        <BusinessFeatures />
+        <About
+            darkMode={darkMode}
+        />
+        <Service 
+            darkMode={darkMode}
+        />
         <Contact 
             darkMode={darkMode}
         />
