@@ -1,10 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({darkMode, setDarkMode}) => {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const languageButtonRef = useRef(null);
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
   const [isAtTop, setIsAtTop] = useState(true); 
+
+  const {i18n} = useTranslation(); 
 
   useEffect(() => {
     const handleOutsideClick = (e) => {
@@ -61,8 +64,20 @@ const Navbar = ({darkMode, setDarkMode}) => {
         </button>
         {languageMenuOpen && (
           <div className={`absolute top-full left-0 ${darkMode ? 'bg-gray-600 dark:bg-gray-800' : 'bg-gray-300'} shadow-md rounded-lg mt-1 border border-gray-400 dark:border-gray-600 dark:text-black`} style={{ left: "-17px" }}>
-            <button onClick={() => selectLanguage('EN')} className={`block w-full text-left px-3 py-1 hover:bg-yellow-300 dark:hover:bg-gray-700 dark:text-white hover:text-black`}>EN</button>
-            <button onClick={() => selectLanguage('DE')} className={`block w-full text-left px-3 py-1 hover:bg-yellow-300 dark:hover:bg-gray-700 dark:text-white hover:text-black`}>DE</button>
+            <button 
+              onClick={() => {
+                selectLanguage('EN')
+                i18n.changeLanguage('en')
+              }} 
+              className={`block w-full text-left px-3 py-1 hover:bg-yellow-300 dark:hover:bg-gray-700 dark:text-white hover:text-black`}
+            >EN</button>
+            <button 
+              onClick={() => {
+                selectLanguage('DE')
+                i18n.changeLanguage('de')
+              }} 
+              className={`block w-full text-left px-3 py-1 hover:bg-yellow-300 dark:hover:bg-gray-700 dark:text-white hover:text-black`}
+            >DE</button>
           </div>
         )}
         <button className='text-xs' 

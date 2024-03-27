@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import React, { useState } from 'react';
 import LangdingPage from './LangdingPage';
 
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState('EN');
@@ -25,6 +26,7 @@ function App() {
         {/* <Startsite /> */}
         <LangdingPage
           darkMode={darkMode}
+          selectedLanguage={selectedLanguage}
         />
       </main>
       {/* <Footer 

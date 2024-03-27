@@ -1,0 +1,52 @@
+{
+	"test": "Try",
+
+	"cta":{
+		"title": "Let's Share Our Cars and Save More Energy Together.",
+		"content": "RideLink helps you connect with colleagues who want to share their car ride or want to take a shared car ride. Connecting with your colleagues as well as contributing to save energy for our planet."
+	},
+
+	"about": {
+		"title": "About",
+		"content": {
+			"1": "Carpooling, also known as car-sharing or ride-sharing, is a transportation arrangement where multiple individuals travel together in the same vehicle. It's a sustainable and cost-effective way to commute, as it reduces traffic congestion, lowers fuel consumption, and decreases carbon emissions.",
+			"2": "By sharing rides, commuters can split the cost of fuel and tolls, making it more economical compared to driving alone. Carpooling also promotes social interaction and networking opportunities among passengers, as they spend time together during the commute.",
+			"3": "RideLink is such a webapp that enable you to find a passenger/ a driver on the way to the office."
+		}
+	},
+
+	"service": {
+		"title": "Our Service",
+		"subtitle": "Here you can find RideLink's main services.",
+		"features": {
+			"1": {
+				"title": "Share Your Car Ride",
+				"content": "Share your commute plans and find colleagues to carpool with. Collaborate seamlessly with your team and streamline your daily commute for a more efficient and sustainable journey to the office."
+			},
+			"2": {
+				"title": "Book A Shared Car Ride",
+				"content": "Reserve a carpooling ride to the office, ensuring energy conservation while expanding your professional network. Our tailored workflows and customizable permissions provide a secure and compliant journey tailored specifically for your needs."
+			},
+			"3": {
+				"title": "Ask For A Ride",
+				"content": "Have a planned routine but do not have a car? Don't worry! Post your plan here and maybe you can find a driver partner."
+			}
+		}
+	},
+
+	"contact": {
+		"title": "Contact",
+		"subtitle": " Got a technical issue? Want to send feedback about a beta feature? Let us know.",
+		"features": {
+			"1":"Your Email",
+			"2":"Subject",
+			"3":"Your Message"
+		},
+		"tips":{
+			"1":"name@cgi.com",
+			"2":"Let us know how we can help you",
+			"3":"Leave a comment..."
+		}
+	}
+}
+

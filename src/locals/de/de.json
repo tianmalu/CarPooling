@@ -1,0 +1,50 @@
+{
+	"test": "Probe",
+	"cta": {
+	  "title": "Lasst uns unsere Autos teilen und zusammen mehr Energie sparen.",
+	  "content": "RideLink hilft Ihnen, sich mit Kollegen zu verbinden, die ihre Autofahrt teilen möchten oder eine gemeinsame Autofahrt unternehmen möchten. Die Verbindung mit Ihren Kollegen sowie die Beitrag zur Energieeinsparung für unseren Planeten."
+	},
+	"about": {
+	  "title": "Über uns",
+	  "content": {
+		"1": "Carpooling, auch bekannt als Car-Sharing oder Ride-Sharing, ist eine Transportvereinbarung, bei der mehrere Personen gemeinsam im selben Fahrzeug reisen. Es ist eine nachhaltige und kostengünstige Möglichkeit zu pendeln, da es den Verkehr reduziert, den Kraftstoffverbrauch senkt und die Kohlenstoffemissionen verringert.",
+		"2": "Durch das Teilen von Fahrten können Pendler die Kosten für Kraftstoff und Maut teilen, was im Vergleich zum Alleinfahren wirtschaftlicher ist. Mitfahrgelegenheit fördert auch die soziale Interaktion und Netzwerkmöglichkeiten unter den Passagieren, da sie während des Pendelns gemeinsam Zeit verbringen.",
+		"3": "RideLink ist eine Web-App, die es Ihnen ermöglicht, einen Mitfahrer/Fahrer auf dem Weg ins Büro zu finden."
+	  }
+	},
+	
+	"service": {
+		"title": "Unser Service",
+		"subtitle": "Hier finden Sie RideLink's Hauptdienste.",
+		"features": {
+		  "1": {
+			"title": "Teilen Sie Ihre Autofahrt",
+			"content": "Teilen Sie Ihre Pendelpläne und finden Sie Kollegen, mit denen Sie Fahrgemeinschaften bilden können. Arbeiten Sie nahtlos mit Ihrem Team zusammen und optimieren Sie Ihren täglichen Arbeitsweg für eine effizientere und nachhaltigere Fahrt ins Büro."
+		  },
+		  "2": {
+			"title": "Buchen Sie eine gemeinsame Autofahrt",
+			"content": "Reservieren Sie eine Fahrgemeinschaftsfahrt ins Büro, um Energie zu sparen und gleichzeitig Ihr berufliches Netzwerk zu erweitern. Unsere maßgeschneiderten Workflows und anpassbaren Berechtigungen bieten eine sichere und konforme Reise, die speziell auf Ihre Bedürfnisse zugeschnitten ist."
+		  },
+		  "3": {
+			"title": "Nach einer Mitfahrgelegenheit fragen",
+			"content": "Haben Sie einen festen Arbeitsablauf, aber kein Auto? Keine Sorge! Veröffentlichen Sie hier Ihren Plan, und vielleicht finden Sie einen Fahrpartner."
+		  }
+		}
+	  },
+
+	  "contact": {
+		"title": "Kontakt",
+		"subtitle": "Haben Sie ein technisches Problem? Möchten Sie Feedback zu einem Beta-Feature senden? Lassen Sie es uns wissen.",
+		"features": {
+			"1": "Ihre E-Mail",
+			"2": "Betreff",
+			"3": "Ihre Nachricht"
+		},
+		"tips": {
+			"1": "name@cgi.com",
+			"2": "Teilen Sie uns mit, wie wir Ihnen helfen können.",
+			"3": "Hinterlassen Sie einen Kommentar..."
+		}
+	}
+  }
+  

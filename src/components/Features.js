@@ -1,29 +1,31 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Service = ({darkMode}) => {
+  const {t} = useTranslation();
+
   return (
     <section id='service' className={`${darkMode ? 'bg-gray-900' : "bg-white"}` }>
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
       <div className="max-w-screen-md mb-8 lg:mb-16 mx-auto flex flex-col items-center">
-        <h2 className={`mb-4 text-4xl tracking-tight font-extrabold ${darkMode ? 'text-white': 'text-gray-900'}`}>Our Service</h2>
+        <h2 className={`mb-4 text-4xl tracking-tight font-extrabold ${darkMode ? 'text-white': 'text-gray-900'}`}>{t("service.title")}</h2>
         <p className="text-gray-500 sm:text-xl dark:text-gray-400 text-center">
-            Here you can find RideLink's main services.
+          {t("service.subtitle")}
         </p>
       </div>
 
         <div className={`space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0 ${darkMode ? 'text-white': 'text-gray-900'}`}>
           <FeatureCard
-            title="Share Your Car Ride"
-            description="Share your commute plans and find colleagues to carpool with. Collaborate seamlessly with your team and streamline your daily commute for a more efficient and sustainable journey to the office."
+            title={t("service.features.1.title")}
+            description={t("service.features.1.content")}
           />
           <FeatureCard
-            title="Book A Car Ride"
-            description="Reserve a carpooling ride to the office, ensuring energy conservation while expanding your professional network. Our tailored workflows and customizable permissions provide a secure and compliant journey tailored specifically for your needs."
+            title={t("service.features.2.title")}
+            description={t("service.features.2.content")}
           />
           <FeatureCard
-            title="Ask For A Ride"
-            description="Have a planned routine but do not have a car? Don't worry! Post your plan here and maybe you can find a driver partner."
-          />
+            title={t("service.features.3.title")}
+            description={t("service.features.3.content")}         />
         </div>
       </div>
     </section>
