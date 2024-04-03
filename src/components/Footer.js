@@ -4,7 +4,7 @@ const Footer = ({darkMode}) => {
 
     return (
         <footer className={`text-center text-white ${darkMode ? 'bg-gray-900' : 'bg-gray-200'}`}>
-            <div className="container p-6 mx-auto">
+            {/* <div className="container p-6 mx-auto">
                 <div className="flex items-center justify-center">
                     <span className={`mr-2 text-lg font-sans px-2 ${darkMode ? '': 'text-gray-700'}`}>Register for free:</span>
                         <button
@@ -14,7 +14,7 @@ const Footer = ({darkMode}) => {
                             Sign up!
                         </button>
                 </div>
-            </div>
+            </div> */}
 
             {/* Copyright section */}
             <div className={`p-0 text-center ${darkMode ? 'bg-black bg-opacity-20' : 'bg-white bg-opacity-50'}`}>

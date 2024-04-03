@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+
 const Login = () => {
     const userRef = useRef(); 
     const errRef = useRef();
@@ -12,8 +13,11 @@ const Login = () => {
     const [success, setSuccess] = useState(false);
 
     useEffect(() =>{
-        userRef.current.focus();
+        if (userRef.current) {
+            userRef.current.focus();
+        }
     },[])
+    
 
     useEffect(() => {
         setErrMsg('');
@@ -23,44 +27,52 @@ const Login = () => {
         e.preventDefault();
     }
 
-  return (
-    <section>
-        <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white-900 md:text-5xl lg:text-6xl dark:text-white">Login</h1>
-        <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username</label>
-            <input 
-                className='username'
-                required
-                type="text"
-                id="username"
-                value={user}
-                ref={userRef}
-                onChange={(e) => setUser(e.target.value)}
-            />
+    return (
+        <section className="flex justify-center items-center min-h-screen bg-dodgerblue">
+            <p className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
+            <div className="w-full max-w-sm bg-opacity-40 bg-gray-400 rounded-md p-8">
+                <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Login</h1>
+                <form onSubmit={handleSubmit}>
+                    <label
+                        className="text-white" 
+                        htmlFor="username"
+                    >Username</label>
+                    <input 
+                        className="w-full border rounded-md p-2 mb-4"
+                        required
+                        type="text"
+                        id="username"
+                        value={user}
+                        onChange={(e) => setUser(e.target.value)}
+                    />
 
-            <label htmlFor="pwd">Password</label>
-            <input 
-                className='password'
-                required
-                type="password"
-                id="pwd"
-                value={pwd}
-                onChange={(e) => setPwd(e.target.value)}
-            />
+                    <label 
+                        htmlFor="pwd"
+                        className="text-white" 
+                    >Password</label>
+                    <input 
+                        className="w-full border rounded-md p-2 mb-4"
+                        required
+                        type="password"
+                        id="pwd"
+                        value={pwd}
+                        onChange={(e) => setPwd(e.target.value)}
+                    />
 
-            <button className="bg-white hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Login</button>
+                    <button className="w-full bg-white hover:bg-yellow-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">Login</button>
 
-            <p style={{ fontSize: '18px' }}>
-                Do not have an account? <br />
-                <span className="line">
-                    {/*put router link here*/}
-                    <a href="#" style={{color: 'rgb(250,250,60)'}}>Register here!</a>
-                </span>
-            </p>
-        </form>
-    </section>
-  )
+                    <p style={{ fontSize: '18px' }} className="mt-4 text-white">
+                        Do not have an account? <br />
+                        <span className="line">
+                            {/*put router link here*/}
+                            <a href="/register" className="text-yellow-400 hover:text-yellow-300">Register here!</a>
+                        </span>
+                    </p>
+                </form>
+            </div>
+        </section>
+    );
 }
+
 
 export default Login;

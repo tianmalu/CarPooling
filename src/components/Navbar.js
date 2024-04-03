@@ -50,10 +50,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
       {/* Links */}
       <div className={`flex rounded-lg border ${darkMode ? 'border-white' : 'border-black'} border-solid border-3 divide-x divide-gray-600`}>
-        <a href="#home" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Home</a>
-        <a href="#about" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>About</a>
-        <a href="#service" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Service</a>
-        <a href="#contact" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Contact</a>
+        <a href="/" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Home</a>
+        <a href="/#about" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>About</a>
+        <a href="/#service" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Service</a>
+        <a href="/#contact" className={`px-4 py-1 text-sm font-medium ${darkMode ? 'text-white' : 'text-gray-800'} ${darkMode ? 'hover:text-yellow-300' : 'hover:text-blue-500'}`}>Contact</a>
       </div>
 
       {/* Login, Mode, Language */}
@@ -89,7 +89,10 @@ const Navbar = ({ darkMode, setDarkMode }) => {
             setDarkMode(!darkMode)
           }}
         >Mode</button>
-        <button className={`bg-yellow-300 text-black font-bold w-full px-9 p-1 shadow-md rounded-md hover:text-blue-600 focus:ring-4 focus:ring-blue-700`}>Login</button>
+        <a 
+          href='/login'
+          className={`bg-yellow-300 text-black font-bold w-full px-9 p-1 shadow-md rounded-md hover:text-blue-600 focus:ring-4 focus:ring-blue-700`}
+        >Login</a>
       </div>
     </nav>
   );
