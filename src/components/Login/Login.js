@@ -30,7 +30,7 @@ const Login = () => {
     return (
         <section className="flex justify-center items-center min-h-screen bg-dodgerblue">
             <p className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
-            <div className="w-full max-w-sm bg-opacity-40 bg-gray-400 rounded-md p-8">
+            <div className="w-full max-w-sm bg-opacity-40 bg-gray-500 rounded-md p-8">
                 <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl dark:text-white">Login</h1>
                 <form onSubmit={handleSubmit}>
                     <label

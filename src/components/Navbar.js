@@ -41,7 +41,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
 
   return (
     // Normal Screen
-    <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} fixed top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-100`}>
+    <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} sticky top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-100`}>
       {/* Logo */}
       <div className="flex items-center">
         {/* <img src="/logo.png" alt="Logo" className="h-8 mr-2" /> */}

@@ -1,12 +1,12 @@
 import React from 'react';
-import CTA from './components/CTA';
-import Contact from './components/Contact';
-import Service from './components/Features';
-import About from './components/About';
+import CTA from '../components/LandingPage/CTA';
+import Contact from '../components/LandingPage/Contact';
+import Service from '../components/LandingPage/Features';
+import About from '../components/LandingPage/About';
 
 const LangdingPage = ({darkMode}) => {
   return (
-    <div style = {{marginTop: '4.5rem'}} className="flex flex-col h-screen text-black">
+    <div className="flex flex-col min-h-screen text-black">
         <CTA 
             darkMode={darkMode}
         />
