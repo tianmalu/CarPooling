@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { Avatar, Button, Dropdown, Navbar, Label, TextInput } from "flowbite-react";
+
 
 const Header = ({ darkMode, setDarkMode }) => {
     const [isAtTop, setIsAtTop] = useState(true);
-    const [searchSize, setSearchSize] = useState('lg'); // 默认搜索框大小为 large
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,52 +17,45 @@ const Header = ({ darkMode, setDarkMode }) => {
         };
     }, []);
 
-    // 在窗口大小改变时更新搜索框大小
-    useEffect(() => {
-        const handleResize = () => {
-            // 根据窗口宽度设置搜索框大小
-            if (window.innerWidth < 768) {
-                setSearchSize('sm'); // 小屏幕下搜索框为 small
-            } else {
-                setSearchSize('lg'); // 大屏幕下搜索框为 large
-            }
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        // 初始化时执行一次
-        handleResize();
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
 
     return (
-        <nav className={`${darkMode ? 'bg-black' : 'bg-gray-100'} sticky top-0 w-full flex justify-between items-center ${isAtTop ? 'p-4' : 'p-2'} text-${darkMode ? 'white' : 'black'} transition-all duration-100`}>
-            {/* Logo */}
-            <div className="flex items-center">
-                <a href='#home' className={`text-4xl font-bold ${darkMode ? 'text-yellow-400' : 'text-blue-800'}`}>RideLink</a>
-            </div>
-            {/* Search */}
-            <form className={`max-w-${searchSize} mx-auto`}>   
-                <label htmlFor="default-search" className="sr-only">Search</label>
-                <div className="relative flex">
-                    <div className="absolute inset-y-0 start-0 flex items-center ps-8 pointer-events-none">
-                        <svg className="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
-                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
-                        </svg>
-                    </div>
-                    <input type="search" id="default-search" className={`block flex-grow px-16 m-2 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`} placeholder="Search..." required />
-                    <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 m-2 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm  px-8 py-2">Search</button>
+        <nav className='sticky top-0 w-full z-50'>
+            <Navbar fluid rounded className='sticky'>
+                <Navbar.Brand href="https://flowbite-react.com">
+                    <span className="self-center whitespace-nowrap text-3xl text-blue-700 font-semibold dark:text-white">RideLink</span>
+                </Navbar.Brand>
+                
+                <div className="flex md:order-2">
+                    <Dropdown
+                    arrowIcon={false}
+                    inline
+                    label={
+                        <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                    }
+                    >
+                    <Dropdown.Header>
+                        <span className="block text-sm">Bonnie Green</span>
+                        <span className="block truncate text-sm font-medium">name@cgi.com</span>
+                    </Dropdown.Header>
+                    <Dropdown.Item>Dashboard</Dropdown.Item>
+                    <Dropdown.Item>Settings</Dropdown.Item>
+                    <Dropdown.Item>Ridings</Dropdown.Item>
+                    <Dropdown.Divider />
+                    <Dropdown.Item>
+                        <Button color='blue'>
+                            Sign Out
+                        </Button>
+                    </Dropdown.Item>
+                    </Dropdown>
+                    <Navbar.Toggle />
                 </div>
-            </form>
-            {/* Avatar */}
-            <div className="flex -space-x-2 overflow-hidden">
-                <img className="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
-            </div>
+                <div className="max-w-full flex gap-4 px-8">
+                    <TextInput id="headerSearch" type="text"  placeholder="Search for ..." required />
+                    <Button color='blue'> Search </Button>
+                </div>
+            </Navbar>
         </nav>
-    );
+      );
 }
 
 export default Header;

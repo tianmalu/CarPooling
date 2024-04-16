@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 
+
 const Navbar = ({ darkMode, setDarkMode }) => {
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const languageButtonRef = useRef(null);

@@ -26,7 +26,7 @@ function App() {
     <Router>
       <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <div style={{ flexGrow: '1' }}>
-          {navbarComponent}
+          {/* {navbarComponent} */}
           <Routes>           
             <Route path='/startsite' element={<Startsite/>} />
             <Route path="/register" element={<Register/>}/>
