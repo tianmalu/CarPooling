@@ -31,7 +31,7 @@ function App() {
             <Route path='/startsite' element={<Startsite/>} />
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route exact path="/" element={<LangdingPage darkMode={darkMode} />}/>
+            <Route exact path="/" element={<LangdingPage darkMode={darkMode} setDarkMode={setDarkMode}/>}/>
           </Routes>
         </div>
         <Footer darkMode={darkMode} />

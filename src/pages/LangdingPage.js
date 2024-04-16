@@ -3,10 +3,15 @@ import CTA from '../components/LandingPage/CTA';
 import Contact from '../components/LandingPage/Contact';
 import Service from '../components/LandingPage/Features';
 import About from '../components/LandingPage/About';
+import Navbar from '../components/Navbar';
 
-const LangdingPage = ({darkMode}) => {
+const LangdingPage = ({darkMode, setDarkMode}) => {
   return (
     <div className="flex flex-col min-h-screen text-black">
+        <Navbar 
+            darkMode={darkMode}
+            setDarkMode = {setDarkMode}
+        />
         <CTA 
             darkMode={darkMode}
         />
