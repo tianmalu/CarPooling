@@ -1,7 +1,7 @@
-import FeaturedRideBox from '../FeaturedRideBox';
-import PreviousRideBox from '../PreviousRideBox'
+import FeaturedRideBox from './FeaturedRideBox';
+import PreviousRideBox from './PreviousRideBox'
+import UpcomingRideBox from './UpcomingRideBox';
 import SearchBar from './SearchBar';
-import UpcomingRideBox from '../UpcomingRideBox';
 
 import { Card } from "flowbite-react";
 

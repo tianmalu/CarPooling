@@ -1,4 +1,4 @@
-import { Card, Button, Datepicker, Label, TextInput } from 'flowbite-react';
+import { Card, Button, Datepicker, TextInput } from 'flowbite-react';
 import { use } from 'i18next';
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next';

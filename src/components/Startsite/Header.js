@@ -21,8 +21,8 @@ const Header = ({ darkMode, setDarkMode }) => {
     return (
         <nav className='sticky top-0 w-full z-50'>
             <Navbar fluid rounded className='sticky'>
-                <Navbar.Brand href="https://flowbite-react.com">
-                    <span className="self-center whitespace-nowrap text-3xl text-blue-700 font-semibold dark:text-white">RideLink</span>
+                <Navbar.Brand href="/">
+                    <span className="self-center whitespace-nowrap text-3xl text-blue-800 font-semibold dark:text-white">RideLink</span>
                 </Navbar.Brand>
                 
                 <div className="flex md:order-2">

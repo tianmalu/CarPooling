@@ -3,10 +3,6 @@ import { Button, Modal, Rating } from "flowbite-react";
 
 
 const PreviousRideBox = () => {
-
-    const [isRated,setIsRated] = useState(false)
-    const rating = useState()
-
   return (
     <>   
         <div className="max-w-full px-4 py-2 bg-white border border-gray-400 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex items-center justify-between">
@@ -29,25 +25,21 @@ export default PreviousRideBox;
 
 export function RatingModal() {
     const [openModal, setOpenModal] = useState(false);
-    const [rating, setRating] = useState(0); // 用于跟踪评分
-    const [hoverIndex, setHoverIndex] = useState(-1); // 用于跟踪鼠标悬浮的星星索引
+    const [rating, setRating] = useState(0); 
+    const [hoverIndex, setHoverIndex] = useState(-1); 
 
-    // 点击星星时更新评分
     const handleStarClick = (index) => {
         setRating(index + 1);
     };
 
-    // 鼠标进入星星时更新悬浮状态
     const handleStarHover = (index) => {
         setHoverIndex(index);
     };
 
-    // 鼠标离开星星时清除悬浮状态
     const handleStarLeave = () => {
         setHoverIndex(-1);
     };
 
-    // 点击星星区域外部时清空评分
     const handleAreaClick = () => {
         setRating(0);
     };
@@ -58,7 +50,7 @@ export function RatingModal() {
             <Modal show={openModal} onClose={() => setOpenModal(false)}>
                 <Modal.Header>Leave your rate for this ride!</Modal.Header>
                 <Modal.Body>
-                    <div className="space-y-6" onClick={handleAreaClick}> {/* 点击星星区域外部时清空评分 */}
+                    <div className="space-y-6" onClick={handleAreaClick}> 
                         <h1 className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
                             Is driver friendly?
                         </h1>
@@ -66,10 +58,10 @@ export function RatingModal() {
                             {Array.from({ length: 5 }, (_, index) => (
                                 <Rating.Star
                                     key={index}
-                                    filled={index < rating || index <= hoverIndex} // 判断当前星星是否被点击或鼠标悬浮
-                                    onClick={() => handleStarClick(index)} // 点击星星时更新评分
-                                    onMouseEnter={() => handleStarHover(index)} // 鼠标进入星星时更新悬浮状态
-                                    onMouseLeave={handleStarLeave} // 鼠标离开星星时清除悬浮状态
+                                    filled={index < rating || index <= hoverIndex}
+                                    onClick={() => handleStarClick(index)} 
+                                    onMouseEnter={() => handleStarHover(index)} 
+                                    onMouseLeave={handleStarLeave} 
                                 />
                             ))}
                         </Rating>
