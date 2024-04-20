@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { Avatar, Button, Dropdown, Navbar, Label, TextInput } from "flowbite-react";
-
+import { Button, Dropdown, Navbar, Label, TextInput } from "flowbite-react";
+import Avatar from 'react-avatar';
 
 const Header = ({ darkMode, setDarkMode }) => {
     const [isAtTop, setIsAtTop] = useState(true);
+    const [userName, setUserName] = useState('');
 
-    useEffect(() => {
+
+     useEffect(() => {
+        const userNameElement = document.getElementById('profilname');
+        if (userNameElement) {
+            setUserName(userNameElement.textContent.trim());
+        }
+
         const handleScroll = () => {
             setIsAtTop(window.scrollY === 0);
         };
@@ -30,11 +37,11 @@ const Header = ({ darkMode, setDarkMode }) => {
                     arrowIcon={false}
                     inline
                     label={
-                        <Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded />
+                        <Avatar name={userName} round={true} size="55" />
                     }
                     >
                     <Dropdown.Header>
-                        <span className="block text-sm">Bonnie Green</span>
+                        <span id='profilname' className="block text-sm">Anna X</span>
                         <span className="block truncate text-sm font-medium">name@cgi.com</span>
                     </Dropdown.Header>
                     <Dropdown.Item>Dashboard</Dropdown.Item>

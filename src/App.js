@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Startsite from './pages/Startsite';
@@ -5,8 +7,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 import LangdingPage from './pages/LangdingPage';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Header from './components/Startsite/Header';
+import UserProfil from './pages/UserProfil';
+
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -31,6 +34,7 @@ function App() {
             <Route path='/startsite' element={<Startsite/>} />
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
+            <Route path="/profil" element={<UserProfil/>}/>
             <Route exact path="/" element={<LangdingPage darkMode={darkMode} setDarkMode={setDarkMode}/>}/>
           </Routes>
         </div>
