@@ -1,0 +1,62 @@
+[
+  {
+    "departure_time": "2024-04-27T19:26:36.393000",
+    "departure_location": "Berlin",
+    "destination": "Munich",
+    "status": "Scheduled",
+    "estimated_distance": 0,
+    "estimated_duration": 0,
+    "ride_id": 22,
+    "driver_id": 2,
+    "car_id": 1,
+    "passengers": []
+  },
+  {
+    "departure_time": "2024-04-08T16:24:58.488000",
+    "departure_location": "Munich",
+    "destination": "Bremen",
+    "status": "Scheduled",
+    "estimated_distance": 0,
+    "estimated_duration": 0,
+    "ride_id": 21,
+    "driver_id": 2,
+    "car_id": 1,
+    "passengers": []
+  },
+  {
+    "departure_time": "2024-04-10T09:36:36.393000",
+    "departure_location": "Munich",
+    "destination": "Bremen",
+    "status": "Scheduled",
+    "estimated_distance": 0,
+    "estimated_duration": 0,
+    "ride_id": 20,
+    "driver_id": 2,
+    "car_id": 1,
+    "passengers": []
+  },
+  {
+    "departure_time": "2024-04-10T09:36:36.393000",
+    "departure_location": "Munich",
+    "destination": "Bremen",
+    "status": "Scheduled",
+    "estimated_distance": 0,
+    "estimated_duration": 0,
+    "ride_id": 19,
+    "driver_id": 2,
+    "car_id": 1,
+    "passengers": []
+  },
+  {
+    "departure_time": "2024-04-10T09:36:36.393000",
+    "departure_location": "Munich",
+    "destination": "Bremen",
+    "status": "Scheduled",
+    "estimated_distance": 0,
+    "estimated_duration": 0,
+    "ride_id": 18,
+    "driver_id": 2,
+    "car_id": 1,
+    "passengers": []
+  }
+]
