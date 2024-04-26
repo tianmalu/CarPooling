@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button } from "flowbite-react";
+import { Button, Modal, Rating } from "flowbite-react";
 
 
 const PreviousRideBox = () => {
@@ -12,9 +12,7 @@ const PreviousRideBox = () => {
             </div>
             <div className="flex px-4 pr-2 gap-2">
                 {/* toggle modal for rating*/}
-                <Button color="blue">
-                    View Rating
-                </Button>
+                <RatingModal />
             </div>
         </div>
     </>
@@ -22,3 +20,31 @@ const PreviousRideBox = () => {
 }
 
 export default PreviousRideBox;
+
+
+export function RatingModal() {
+    const [openModal, setOpenModal] = useState(false);
+
+    return (
+        <>
+            <Button color="blue" onClick={() => setOpenModal(true)}>View Rating</Button>
+            <Modal show={openModal} onClose={() => setOpenModal(false)}>
+                <Modal.Header>Your Rating from This Trip!</Modal.Header>
+                <Modal.Body>
+                    <div className="space-y-6" > 
+                        <h1 className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            This is how the rider rates this trip:
+                        </h1>
+                        <Rating size="lg">
+                        <Rating.Star />
+                            <Rating.Star />
+                            <Rating.Star />
+                            <Rating.Star />
+                            <Rating.Star filled={false} />
+                        </Rating>
+                    </div>
+                </Modal.Body>
+            </Modal>
+        </>
+    );
+}

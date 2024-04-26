@@ -29,7 +29,8 @@ const SearchBar = () => {
   return (
     <div className='flex justify-center items-center '>
       <div className="container p-2 rounded-lg ">
-        <Card className='max-w-full'>       
+        <Card className='max-w-full'> 
+          <h1 className='text-2xl mb-4'>Hi UserName! Welcome to RideLink!</h1>      
           <div className="max-w-full">
             <TextInput id="startPoint" type="text" icon={FaLocationDot} placeholder="Enter Your Starting Point" required />
           </div>

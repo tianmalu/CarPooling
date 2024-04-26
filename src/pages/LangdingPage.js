@@ -3,7 +3,7 @@ import CTA from '../components/LandingPage/CTA';
 import Contact from '../components/LandingPage/Contact';
 import Service from '../components/LandingPage/Features';
 import About from '../components/LandingPage/About';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/LandingPage/Navbar';
 
 const LangdingPage = ({darkMode, setDarkMode}) => {
   return (

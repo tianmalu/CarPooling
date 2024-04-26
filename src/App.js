@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Register from './components/Register/Register';
 import Login from './components/Login/Login';
 import Startsite from './pages/Startsite';
-import Navbar from './components/Navbar';
+import Navbar from './components/LandingPage/Navbar';
 import Footer from './components/Footer';
 import React, { useState } from 'react';
 import LangdingPage from './pages/LangdingPage';

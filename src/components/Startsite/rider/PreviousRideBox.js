@@ -48,11 +48,11 @@ export function RatingModal() {
         <>
             <Button color="blue" onClick={() => setOpenModal(true)}>Rating</Button>
             <Modal show={openModal} onClose={() => setOpenModal(false)}>
-                <Modal.Header>Leave your rate for this ride!</Modal.Header>
+                <Modal.Header>Leave your rating for this ride!</Modal.Header>
                 <Modal.Body>
                     <div className="space-y-6" onClick={handleAreaClick}> 
                         <h1 className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                            Is driver friendly?
+                            How is your riding experience?
                         </h1>
                         <Rating size="lg">
                             {Array.from({ length: 5 }, (_, index) => (
@@ -65,9 +65,6 @@ export function RatingModal() {
                                 />
                             ))}
                         </Rating>
-                        <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                            some submission conditions maybe....
-                        </p>
                     </div>
                 </Modal.Body>
                 <Modal.Footer>

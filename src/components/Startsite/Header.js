@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Dropdown, Navbar, Label, TextInput } from "flowbite-react";
+import { Button, Dropdown, Navbar, TextInput } from "flowbite-react";
 import Avatar from 'react-avatar';
 
 const Header = ({ darkMode, setDarkMode }) => {
@@ -44,9 +44,9 @@ const Header = ({ darkMode, setDarkMode }) => {
                         <span id='profilname' className="block text-sm">Anna X</span>
                         <span className="block truncate text-sm font-medium">name@cgi.com</span>
                     </Dropdown.Header>
-                    <Dropdown.Item>Dashboard</Dropdown.Item>
-                    <Dropdown.Item>Settings</Dropdown.Item>
-                    <Dropdown.Item>Ridings</Dropdown.Item>
+                    <Dropdown.Item href='/startsite'>Dashboard</Dropdown.Item>
+                    <Dropdown.Item href='/profil'>Settings</Dropdown.Item>
+                    <Dropdown.Item href='/profil'>Ridings</Dropdown.Item>
                     <Dropdown.Divider />
                     <Dropdown.Item>
                         <Button color='blue'>

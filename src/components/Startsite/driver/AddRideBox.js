@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, Modal } from "flowbite-react";
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { Card, Datepicker, TextInput, Select } from 'flowbite-react';
+import { Datepicker, TextInput, Select } from 'flowbite-react';
 
 import { FaLocationDot } from "react-icons/fa6";
 import { FaCarSide } from "react-icons/fa";
