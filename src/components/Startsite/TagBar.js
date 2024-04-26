@@ -1,6 +1,4 @@
 import { Tabs } from "flowbite-react";
-import { HiAdjustments, HiClipboardList, HiUserCircle } from "react-icons/hi";
-import { MdDashboard } from "react-icons/md";
 import { FaCarAlt } from "react-icons/fa";
 import { MdEmojiPeople } from "react-icons/md";
 import RiderIndex from "./rider/RiderIndex";

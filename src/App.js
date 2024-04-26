@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 import LangdingPage from './pages/LangdingPage';
 import Header from './components/Startsite/Header';
 import UserProfil from './pages/UserProfil';
+import SearchResult from './pages/SearchResult';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,6 +32,7 @@ function App() {
         <div style={{ flexGrow: '1' }}>
           {/* {navbarComponent} */}
           <Routes>           
+            <Route path='/search' element= {<SearchResult />} />
             <Route path='/startsite' element={<Startsite/>} />
             <Route path="/register" element={<Register/>}/>
             <Route path="/login" element={<Login/>}/>
