@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
-import Register from './components/Register/Register';
-import Login from './components/Login/Login';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 import Startsite from './pages/Startsite';
 import Navbar from './components/LandingPage/Navbar';
 import Footer from './components/Footer';
@@ -34,8 +34,8 @@ function App() {
           <Routes>           
             <Route path='/search' element= {<SearchResult />} />
             <Route path='/startsite' element={<Startsite/>} />
-            <Route path="/register" element={<Register/>}/>
-            <Route path="/login" element={<Login/>}/>
+            <Route path="/register" element={<RegisterPage/>}/>
+            <Route path="/login" element={<LoginPage/>}/>
             <Route path="/profil" element={<UserProfil/>}/>
             <Route exact path="/" element={<LangdingPage darkMode={darkMode} setDarkMode={setDarkMode}/>}/>
           </Routes>
