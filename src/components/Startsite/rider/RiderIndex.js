@@ -5,12 +5,16 @@ import SearchBar from './SearchBar';
 
 import { Card } from "flowbite-react";
 
+import React, { useState } from 'react';
+
 
 
 const RiderIndex = () => {
+    const [welcome, setWelcome] = useState(true); // Create welcome state here
+
   return (
     <>
-        <SearchBar/>
+        <SearchBar welcome = {welcome}/>
         <div className="flex">
                 {/* Left: */}
                 <div className="flex-1 bg-gray-200 p-4 m-4 rounded-lg shadow">

@@ -1,5 +1,5 @@
 import Header from "../components/Startsite/Header";
-import SearchBar from "../components/SearchResult/SearchBar";
+import SearchBar from "../components/Startsite/rider/SearchBar";
 import ResultContent from "../components/SearchResult/ResultContent";
 
 const SearchResult = () => {
@@ -7,7 +7,7 @@ const SearchResult = () => {
     return (
       <>
         <Header />
-        <SearchBar />
+        <SearchBar welcome={false}/>
         <ResultContent />
       </>
     )
