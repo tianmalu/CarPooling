@@ -1,4 +1,5 @@
-import React from 'react'
+import { useState } from "react";
+import { Button, Modal } from "flowbite-react";
 
 const UpcomingRideBox = () => {
   return (
@@ -15,9 +16,7 @@ const UpcomingRideBox = () => {
                 <a className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-400 rounded-lg hover:bg-yellow-400  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     copy link
                 </a>
-                <a  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Pending/ Contact Driver
-                </a>
+                <ContextModal />
             </div>
         </div>
     </>
@@ -25,3 +24,27 @@ const UpcomingRideBox = () => {
 }
 
 export default UpcomingRideBox
+
+
+
+export function ContextModal() {
+  const [openModal, setOpenModal] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setOpenModal(true)} color= "blue"> Contact Driver </Button>
+      <Modal show={openModal} onClose={() => setOpenModal(false)}>
+        <Modal.Header>Contect Driver</Modal.Header>
+        <Modal.Body>
+            <p>Driver: Anna X</p>
+            <p>Phone: 123456789</p>
+            <p>Email:       </p>
+            <p>License Plate:      XXXXX </p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button color="blue" onClick={() => setOpenModal(false)}>OK</Button>
+        </Modal.Footer>
+      </Modal>
+    </>
+  );
+}
